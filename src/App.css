@@ -1,0 +1,67 @@
+.hero {
+	background: black url("https://tesla-cdn.thron.com/delivery/public/image/tesla/538ac149-d103-4834-9d38-641d8ae447ef/bvlatuR/std/4096x2560/Homepage-Model-S-Desktop-LHD") center / cover;
+}
+
+/* @media (max-width: 1024px) {
+	.hero {
+		background: black url("../public/img/hero2.jpeg") center / cover;
+	}
+}
+@media (max-width: 768px) {
+	.hero {
+		background: black url("../public/img/hero3.jpeg") center / cover;
+	}
+} */
+.center, .center-column, .top, .right, .bottom, .left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center-column {
+    flex-direction: column;
+}
+
+.top    { align-items:     flex-start; }
+.right  { justify-content: flex-end;   }
+.bottom { align-items:     flex-end;   }
+.left   { justify-content: flex-start; }
+
+.single-spaced, .single-spaced * {
+    line-height: 1;
+}
+
+@media (max-width: 1024px) {
+	.desktop {
+		display: none;
+	}
+}
+
+#a {
+  grid-area: a;
+}
+#b {
+  grid-area: b;
+}
+#c {
+  grid-area: c;
+}
+#d {
+  grid-area: d;
+}
+#e {
+  grid-area: e;
+}
+
+#grid{
+  display: grid;
+  grid-template-areas: "a a a a" "b c d e";
+  transition: all;
+  grid-row-gap: 1rem;
+}
+
+@media (max-width: 512px) {
+  #grid{
+    grid-template-areas: "a a a" "b c d" "e e e";
+  }
+}
